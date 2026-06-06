@@ -3,7 +3,7 @@
 Welcome to my personal portfolio repository! This is a modern, fully responsive, and highly interactive single-page application built to showcase my backend engineering and full-stack development skills.
 
 ## 🚀 Live Demo
-*(Add your live URL here once deployed, e.g., https://mohammadanas.dev)*
+*https://portfolio-1-phi-beryl.vercel.app/*
 
 ## ✨ Features
 - **Dark & Light Mode:** Seamless theme toggling with local storage persistence.
