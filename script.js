@@ -1,79 +1,100 @@
-/* ─── NAV SCROLL ─── */
-const navbar = document.getElementById('navbar');
-const scrollTopBtn = document.getElementById('scroll-top');
+// =========================
+// MOBILE MENU
+// =========================
 
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  navbar.classList.toggle('scrolled', y > 40);
-  scrollTopBtn.classList.toggle('show', y > 400);
-});
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-/* ─── HAMBURGER ─── */
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileNav.classList.toggle('open');
-  document.body.classList.toggle('no-scroll');
-});
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    document.body.classList.remove('no-scroll');
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("mobile-open");
   });
-});
-
-/* ─── SCROLL REVEAL ─── */
-const revealEls = document.querySelectorAll(
-  '.timeline-item, .project-card, .skill-group, .edu-card, .ach-card'
-);
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 80);
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-revealEls.forEach(el => observer.observe(el));
-
-/* ─── ACTIVE NAV HIGHLIGHT ─── */
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      navLinks.forEach(a => {
-        a.style.color = a.getAttribute('href') === `#${id}`
-          ? 'var(--accent)'
-          : '';
-      });
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-
-sections.forEach(s => sectionObserver.observe(s));
-
-/* ─── THEME TOGGLE ─── */
-const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
-if (currentTheme === 'dark') {
-  document.documentElement.setAttribute('data-theme', 'dark');
 }
-themeToggle.addEventListener('click', () => {
-  let theme = document.documentElement.getAttribute('data-theme');
-  if (theme === 'dark') {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'light');
+
+// =========================
+// NAVBAR SCROLL EFFECT
+// =========================
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    navbar.style.borderBottom =
+      "1px solid rgba(255,255,255,.08)";
   } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
+    navbar.style.borderBottom =
+      "1px solid rgba(255,255,255,.04)";
   }
 });
 
+// =========================
+// SCROLL REVEAL
+// =========================
 
+const revealElements =
+  document.querySelectorAll(
+    ".project, .about-card, .skills-grid span, .contact"
+  );
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
+
+revealElements.forEach((el) => {
+  el.classList.add("reveal");
+  observer.observe(el);
+});
+
+// =========================
+// ACTIVE NAVIGATION
+// =========================
+
+const sections =
+  document.querySelectorAll("section[id]");
+
+const navItems =
+  document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop =
+      section.offsetTop - 150;
+
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach((link) => {
+    link.classList.remove("active-link");
+
+    if (
+      link.getAttribute("href") ===
+      `#${current}`
+    ) {
+      link.classList.add("active-link");
+    }
+  });
+});
+
+// =========================
+// SMOOTH LINK CLOSING
+// =========================
+
+document.querySelectorAll('a[href^="#"]')
+.forEach((anchor) => {
+  anchor.addEventListener("click", () => {
+    navLinks.classList.remove("mobile-open");
+  });
+});

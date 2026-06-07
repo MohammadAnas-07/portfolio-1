@@ -1,368 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mohammad Anas — Software Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohammad Anas | Backend Engineer</title>
+
+<meta name="description"
+content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker and scalable backend systems."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-logo">M<span>.</span>Anas</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-actions">
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </button>
-    <div class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
+<!-- NAVBAR -->
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="#" class="logo">
+            Mohammad Anas
+        </a>
+        
+
+        <nav>
+            <ul class="nav-links">
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#certifications">Certifications</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+        </nav>
+
+        <button class="menu-btn">
+            ☰
+        </button>
+
     </div>
-  </div>
-</nav>
-<nav class="mobile-nav" id="mobile-nav">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#education">Education</a>
-  <a href="#achievements">Achievements</a>
-  <a href="#contact">Contact</a>
-</nav>
+</header>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-geo g1"></div>
-  <div class="hero-geo g2"></div>
-  <div class="hero-geo g3"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Available for opportunities</div>
-    <h1 class="hero-name">
-      Mohammad Anas
-      <span class="line2" id="typewriter">Software Engineer</span></span>
-    </h1>
-    <p class="hero-tagline">
-      Full-Stack Developer specialising in Node.js, React, and cloud-ready backend systems. Building production-grade applications with clean APIs and real-world impact.
-    </p>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn btn-primary">↓ View Projects</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
-      <a href="resume.pdf" target="_blank" class="btn btn-outline">📄 Resume</a>
+
+<section class="hero">
+
+    <div class="container">
+
+        <span class="eyebrow">
+            Available For Opportunities
+        </span>
+
+        <h1>
+            Backend Engineer
+            <br>
+            Building scalable systems
+            for real-world products.
+        </h1>
+
+        <p class="hero-description">
+            Computer Science graduate focused on
+            Node.js, PostgreSQL, Redis and Docker.
+            I build production-grade APIs,
+            authentication systems and scalable backend architecture.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn-primary">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn-secondary">
+                Contact Me
+            </a>
+            <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <h3>2+</h3>
+                <span>Production Deployments</span>
+            </div>
+
+            <div>
+                <h3>6+</h3>
+                <span>Core Technologies</span>
+            </div>
+
+            <div>
+                <h3>3+</h3>
+                <span>Certifications</span>
+            </div>
+
+        </div>
+
     </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">2<span>+</span></div>
-        <div class="stat-label">Production Projects</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">6<span>+</span></div>
-        <div class="stat-label">Technologies</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">3<span>+</span></div>
-        <div class="stat-label">Certifications</div>
-      </div>
-    </div>
-  </div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <div class="section-header">
-    <div class="section-label">Who I Am</div>
-    <h2 class="section-title">About Me</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="about-grid">
-    <div class="about-avatar-wrap">
-      <div class="about-avatar">MA
-        <div class="about-dot"></div>
-      </div>
-      <div class="about-avatar-ring"></div>
-    </div>
-    <div class="about-text">
-      <h3>Building reliable, scalable systems</h3>
-      <p>
-        I'm a Computer Science undergraduate based in New Delhi, with hands-on experience building full-stack web applications that go beyond coursework — shipped, deployed, and documented.
-      </p>
-      <p>
-        My focus is on backend engineering: designing clean REST APIs, securing authentication flows, and thinking carefully about data models and performance. I build things I'd be comfortable defending in a code review.
-      </p>
-      <p>
-        I'm seeking Software Engineer or Full Stack Developer roles where I can contribute immediately and keep raising the bar.
-      </p>
-      <div class="about-chips">
-        <span class="chip">🎓 B.Tech CSE — Jamia Hamdard</span>
-        <span class="chip">📍 New Delhi, India</span>
-        <span class="chip">⚡ Open to Work</span>
-        <span class="chip">🔧 Backend-first</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-header">
-    <div class="section-label">Career</div>
-    <h2 class="section-title">Experience</h2>
-    <div class="divider"></div>
-    <p class="section-desc">Building toward my first professional role — projects and education below reflect hands-on depth.</p>
-  </div>
-  <div class="exp-empty">
-    <strong>No formal work experience yet</strong>
-    My project work demonstrates production-level skills — see Projects below. Actively seeking a first full-time role.
-  </div>
+<section id="about" class="section">
+
+    <div class="container">
+
+        <span class="section-label">
+            ABOUT
+        </span>
+
+        <h2>
+            Building software that scales.
+        </h2>
+
+        <div class="about-grid">
+
+            <div>
+                <p>
+                    I'm Mohammad Anas, a Backend Engineer
+                    passionate about building secure APIs,
+                    scalable systems and production-ready applications.
+                </p>
+
+                <p>
+                    My work focuses on authentication,
+                    database architecture,
+                    performance optimization,
+                    caching strategies and backend infrastructure.
+                </p>
+            </div>
+
+            <div class="about-card">
+
+                <h4>Currently Focused On</h4>
+
+                <ul>
+                    <li>Node.js Architecture</li>
+                    <li>PostgreSQL Optimization</li>
+                    <li>Redis Caching</li>
+                    <li>Docker Deployment</li>
+                    <li>System Design</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header">
-    <div class="section-label">Work</div>
-    <h2 class="section-title">Projects</h2>
-    <div class="divider"></div>
-    <p class="section-desc">Production-deployed applications built end-to-end — from database schema to live URL.</p>
-  </div>
-  <div class="projects-grid">
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="pc-header">
-        <div class="pc-icon">📡</div>
-        <div class="pc-links">
-          <a href="https://github.com/MohammadAnas-07/content-broadcasting-system" class="pc-link" target="_blank" title="GitHub">⌥</a>
-          <a href="https://content-broadcasting-system-1-890w.onrender.com" class="pc-link" title="Live Demo">↗</a>
-        </div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">Content Broadcasting System</div>
-        <div class="pc-date">April 2026</div>
-        <p class="pc-desc">Production-ready backend platform for secure content broadcasting, scheduling, and multi-role approval workflow management in educational environments.</p>
-        <ul class="pc-highlights">
-          <li>Role-based approval workflows (Principal / Teacher) enforced at the API layer via JWT + RBAC</li>
-          <li>Redis caching + API rate limiting significantly reduced repeated DB query load under concurrency</li>
-          <li>Dynamic scheduler using cycle-based algorithms for time-based content delivery</li>
-          <li>Swagger auto-docs, Multer file uploads, Zod schema validation, Dockerized & deployed on Render</li>
-        </ul>
-      </div>
-      <div class="pc-footer">
-        <span class="tag">Node.js</span>
-        <span class="tag">Express.js</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Redis</span>
-        <span class="tag">Prisma</span>
-        <span class="tag">Docker</span>
-        <span class="tag">JWT</span>
-        <span class="tag">Swagger</span>
-      </div>
-    </div>
+<section id="projects" class="section">
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="pc-header">
-        <div class="pc-icon">🗂️</div>
-        <div class="pc-links">
-          <a href="https://github.com/MohammadAnas-07/team-task-manager" class="pc-link" target="_blank" title="GitHub">⌥</a>
-          <a href="https://ideal-intuition-production-5f1d.up.railway.app/" class="pc-link" title="Live Demo">↗</a>
-        </div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-title">Team Task Manager</div>
-        <div class="pc-date">May 2026</div>
-        <p class="pc-desc">Full-stack collaboration platform featuring project management, task CRUD, member roles, and real-time workflow tracking — deployed end-to-end.</p>
-        <ul class="pc-highlights">
-          <li>JWT auth with httpOnly cookies, persistent sessions, and ADMIN / MEMBER RBAC</li>
-          <li>Analytics dashboard with task stats, overdue tracking, and project activity visualisation</li>
-          <li>Axios interceptors, toast notifications, mobile-responsive UI with Tailwind CSS</li>
-          <li>React frontend + Node/Express backend — fully production-deployed</li>
-        </ul>
-      </div>
-      <div class="pc-footer">
-        <span class="tag">React.js</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">Express.js</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Prisma</span>
-        <span class="tag">Tailwind CSS</span>
-        <span class="tag">JWT</span>
-      </div>
-    </div>
+<div class="container">
 
-  </div>
+<span class="section-label">
+FEATURED WORK
+</span>
+
+<h2>
+Selected Projects
+</h2>
+
+<!-- Project 1 -->
+
+<article class="project">
+
+<div class="project-content">
+
+<h3>
+Content Broadcasting System
+</h3>
+
+<p>
+Production-ready content management and broadcasting platform
+featuring RBAC, JWT authentication,
+Redis caching and automated scheduling workflows.
+</p>
+
+<ul>
+
+<li>JWT + RBAC Authorization</li>
+
+<li>Redis Caching Layer</li>
+
+<li>Dockerized Deployment</li>
+
+<li>Swagger API Documentation</li>
+
+<li>PostgreSQL + Prisma ORM</li>
+
+</ul>
+
+<div class="project-links">
+
+<a href="https://content-broadcasting-system-1-890w.onrender.com">
+Live Demo
+</a>
+
+<a href="https://github.com/MohammadAnas-07/content-broadcasting-system">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+<!-- Project 2 -->
+
+<article class="project">
+
+<div class="project-content">
+
+<h3>
+Team Task Manager
+</h3>
+
+<p>
+Full-stack collaboration platform
+with project management,
+role-based permissions,
+analytics dashboard and production deployment.
+</p>
+
+<ul>
+
+<li>React + Node.js</li>
+
+<li>JWT Authentication</li>
+
+<li>Project Analytics</li>
+
+<li>Role Management</li>
+
+<li>PostgreSQL Database</li>
+
+</ul>
+
+<div class="project-links">
+
+<a href="https://ideal-intuition-production-5f1d.up.railway.app/">
+Live Demo
+</a>
+
+<a href="https://github.com/MohammadAnas-07/team-task-manager">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <div class="section-header">
-    <div class="section-label">Tech Stack</div>
-    <h2 class="section-title">Skills</h2>
-    <div class="divider"></div>
-    <p class="section-desc">Technologies I use to design, build, and ship reliable software.</p>
+
+<section id="skills" class="section">
+
+  <div class="container">
+
+    <span class="section-label">
+      TECH STACK
+    </span>
+
+    <h2>
+      Technologies I Use
+    </h2>
+
+    <div class="skills-wrapper">
+
+      <div class="skill-category">
+
+        <h3>Backend</h3>
+
+        <div class="skills-grid">
+          <span>
+            <img src="assets/nodedotjs.svg" alt="">
+            Node.js
+        </span>
+          <span>
+            <img src="assets/expressdotcom.svg" alt="">
+            Express.js
+        </span>
+          <span>
+            <img src="assets/fastapi.svg" alt="">
+            REST APIs
+        </span>
+          <span>
+            <img src="assets/jsonwebtokens.svg" alt="">
+            JWT
+          </span>
+        </div>
+
+      </div>
+
+      <div class="skill-category">
+
+        <h3>Database and Caching</h3>
+
+        <div class="skills-grid">
+          <span>
+            <img src="assets/postgresql.svg" alt="">
+            PostgreSQL
+        </span>
+          <span>
+            <img src="assets/prisma.svg" alt="">
+            Prisma ORM
+        </span>
+          <span>
+            <img src="assets/redis.svg" alt="">
+            Redis
+        </span>
+          <span>
+            <img src="assets/mongodb.svg" alt="">
+            MongoDB
+        </span>
+        </div>
+
+      </div>
+
+      <div class="skill-category">
+
+        <h3>Frontend</h3>
+
+        <div class="skills-grid">
+          <span>
+            <img src="assets/react.svg" alt="">
+            React
+        </span>
+          <span>
+            <img src="assets/javascript.svg" alt="">
+            JavaScript
+        </span>
+          <span>
+            <img src="assets/html5.svg" alt="">
+            HTML
+        </span>
+          <span>
+            <img src="assets/css.svg" alt="">
+            CSS
+        </span>
+          <span>
+            <img src="assets/tailwindcss.svg" alt="">
+            Tailwind CSS
+        </span>
+          <span>
+            <img src="assets/nextdotjs.svg" alt="">
+            Next.js
+        </span>
+        </div>
+
+      </div>
+
+      <div class="skill-category">
+
+        <h3>DevOps & Tools</h3>
+
+        <div class="skills-grid">
+          <span>
+            <img src="assets//docker.svg" alt="">
+            Docker
+        </span>
+          <span>
+            <img src="assets/git.svg" alt="">
+            Git
+        </span>
+          <span>
+            <img src="assets/github.svg" alt="">
+            GitHub
+        </span>
+          <span>
+            <img src="assets/postman.svg" alt="">
+            Postman
+        </span>
+        </div>
+
+      </div>
+      <div class="skill-category">
+
+        <h3>CS Fundamentals</h3>
+
+        <div class="skills-grid">
+          <span>
+            Data Structures & Algorithms
+        </span>
+          <span>
+            OOPS
+        </span>
+          <span>
+            DBMS
+        </span>
+          <span>
+            Operating Systems
+        </span>
+          <span>
+            Computer Networks
+        </span>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <div class="sg-icon">💻</div>
-      <div class="sg-title">Languages</div>
-      <div class="skill-tags">
-        <span class="skill-tag">JavaScript (ES6+)</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">SQL</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="sg-icon">🎨</div>
-      <div class="sg-title">Frontend</div>
-      <div class="skill-tags">
-        <span class="skill-tag">React.js</span>
-        <span class="skill-tag">Next.js</span>
-        <span class="skill-tag">HTML5</span>
-        <span class="skill-tag">CSS3</span>
-        <span class="skill-tag">Tailwind CSS</span>
-        <span class="skill-tag">Bootstrap</span>
-        <span class="skill-tag">Vite</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="sg-icon">⚙️</div>
-      <div class="sg-title">Backend</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Express.js</span>
-        <span class="skill-tag">REST API Design</span>
-        <span class="skill-tag">JWT Auth</span>
-        <span class="skill-tag">Middleware</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="sg-icon">🗄️</div>
-      <div class="sg-title">Databases & Caching</div>
-      <div class="skill-tags">
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">Prisma ORM</span>
-        <span class="skill-tag">Redis</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="sg-icon">🚀</div>
-      <div class="sg-title">DevOps & Tools</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">GitHub</span>
-        <span class="skill-tag">Postman</span>
-        <span class="skill-tag">CI/CD</span>
-        <span class="skill-tag">VS Code</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="sg-icon">🧠</div>
-      <div class="sg-title">CS Fundamentals</div>
-      <div class="skill-tags">
-        <span class="skill-tag">DSA</span>
-        <span class="skill-tag">OOP</span>
-        <span class="skill-tag">DBMS</span>
-        <span class="skill-tag">Operating Systems</span>
-        <span class="skill-tag">Computer Networks</span>
-      </div>
-    </div>
-  </div>
+
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
-  <div class="section-header">
-    <div class="section-label">Academic Background</div>
-    <h2 class="section-title">Education</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="edu-cards">
-    <div class="edu-card">
-      <div class="edu-degree">B.Tech in Computer Science Engineering</div>
-      <div class="edu-school">Jamia Hamdard, New Delhi, India</div>
-      <span class="edu-year">Completed</span>
+
+<section id="education" class="section">
+
+  <div class="container">
+
+    <span class="section-label">
+      EDUCATION
+    </span>
+
+    <h2>
+      Academic Background
+    </h2>
+
+    <div class="education-card">
+
+      <div class="education-top">
+
+        <div>
+
+          <h3>
+            B.Tech in Computer Science Engineering
+          </h3>
+
+          <p>
+            Jamia Hamdard, New Delhi, India
+          </p>
+
+        </div>
+
+        <span class="education-badge">
+          Completed
+        </span>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="section-header">
-    <div class="section-label">Recognition</div>
-    <h2 class="section-title">Certifications & Achievements</h2>
-    <div class="divider"></div>
-    <p class="section-desc">Verified credentials that complement hands-on project work.</p>
+<!-- CERTIFICATIONS -->
+
+<section id="certifications" class="section">
+
+  <div class="container">
+
+    <span class="section-label">
+      CERTIFICATIONS
+    </span>
+
+    <h2>
+      Recognition & Credentials
+    </h2>
+
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <h3>Complete Web Development Bootcamp</h3>
+        <p>Udemy</p>
+      </div>
+
+      <div class="cert-card">
+        <h3>DSA, Aptitude & Reasoning</h3>
+        <p>takeUforward</p>
+      </div>
+
+      <div class="cert-card">
+        <h3>SQL Basics Certification</h3>
+        <p>HackerRank</p>
+      </div>
+
+      <div class="cert-card">
+        <h3>2 Production Deployments</h3>
+        <p>GitHub + Render</p>
+      </div>
+
+    </div>
+
   </div>
-  <div class="ach-grid">
-    <div class="ach-card">
-      <div class="ach-icon">🎓</div>
-      <div class="ach-title">Complete Web Development Bootcamp</div>
-      <div class="ach-source">Udemy</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon">🏆</div>
-      <div class="ach-title">DSA, Aptitude & Reasoning</div>
-      <div class="ach-source">takeUforward</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon">🥇</div>
-      <div class="ach-title">SQL Basics Certification</div>
-      <div class="ach-source">HackerRank</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon">🚢</div>
-      <div class="ach-title">2 Production Deployments</div>
-      <div class="ach-source">GitHub + Render — Apr/May 2026</div>
-    </div>
-  </div>
+
 </section>
+
+
+</div>
+
+</section>
+
+
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="section-header" style="position:relative;">
-    <div class="section-label">Let's Connect</div>
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="divider"></div>
-    <p class="section-desc">Open to full-time Software Engineer and Full Stack Developer roles. Reach out via any channel below.</p>
-  </div>
-  <div class="contact-links">
-    <a href="mailto:ansarianas53665@gmail.com" class="contact-link">
-      <span class="cl-icon">✉️</span> ansarianas53665@gmail.com
-    </a>
-    <a href="tel:+916386250620" class="contact-link">
-      <span class="cl-icon">📱</span> +91 63862 50620
-    </a>
-    <a href="http://linkedin.com/in/mohammad-anas-790556236" target="_blank" class="contact-link">
-      <span class="cl-icon">🔗</span> LinkedIn
-    </a>
-    <a href="https://github.com/MohammadAnas-07" target="_blank" class="contact-link">
-      <span class="cl-icon">⌥</span> GitHub
-    </a>
-  </div>
+
+<section id="contact" class="section contact">
+
+<div class="container">
+
+<h2>
+Let's build something together.
+</h2>
+
+<p>
+Currently open to Software Engineer,
+Backend Developer and Full Stack Developer opportunities.
+</p>
+
+<div class="contact-links">
+
+<a href="mailto:ansarianas53665@gmail.com">
+Email
+</a>
+
+<a href="https://github.com/MohammadAnas-07">
+GitHub
+</a>
+
+<a href="https://linkedin.com/in/mohammad-anas-790556236">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Mohammad Anas — Designed & built with <span>♥</span></p>
+
+<div class="container">
+
+<p>
+© 2026 Mohammad Anas
+</p>
+
+</div>
+
 </footer>
 
-<!-- SCROLL TOP -->
-<button id="scroll-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
 <script src="script.js"></script>
+
 </body>
 </html>
