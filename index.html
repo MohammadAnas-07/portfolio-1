@@ -1,606 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mohammad Anas | Backend Engineer</title>
+  <title>Mohammad Anas | Backend Engineer</title>
+  <meta name="description" content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker, and API architecture.">
 
-<meta name="description"
-content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker and scalable backend systems."/>
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohammad Anas | Backend Engineer">
+  <meta property="og:description" content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker, and API architecture.">
+  <meta property="og:image" content="assets/team-task-manager.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammad Anas | Backend Engineer">
+  <meta name="twitter:description" content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker, and API architecture.">
+  <meta name="twitter:image" content="assets/team-task-manager.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<script>
-  (function() {
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = storedTheme || (prefersDark ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', theme);
-  })();
-</script>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    (function() {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
-
 
 <body>
 
-<!-- NAVBAR -->
+  <!-- SVG Sprite Definition for Reusable Icons -->
+  <svg style="display: none;">
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </symbol>
+  </svg>
 
-<header class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
     <div class="container nav-container">
+      <a href="#" class="logo">Mohammad Anas</a>
 
-        <a href="#" class="logo">
-            Mohammad Anas
-        </a>
-        
-
-        <nav>
-            <ul class="nav-links">
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#education">Education</a></li>
-
-<li><a href="#certifications">Certifications</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-
-<li class="mobile-toggle-li">
-    <button class="theme-toggle" aria-label="Toggle Theme">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </button>
-</li>
-</ul>
-
-        </nav>
-
-        <div class="nav-actions">
-            <button class="theme-toggle desktop-toggle" aria-label="Toggle Theme">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="mobile-toggle-li">
+            <button class="theme-toggle" aria-label="Toggle theme">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
-            <button class="menu-btn">
-                ☰
-            </button>
-        </div>
+          </li>
+        </ul>
+      </nav>
 
+      <div class="nav-actions">
+        <button class="theme-toggle desktop-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- HERO -->
-
-<section class="hero">
-
+  <!-- HERO -->
+  <section class="hero">
     <div class="container">
+      <span class="eyebrow">Available For Opportunities</span>
 
-        <span class="eyebrow">
-            Available For Opportunities
-        </span>
+      <h1>
+        Backend Engineer
+        <br>
+        Building reliable systems for real-world applications.
+      </h1>
 
-        <h1>
-            Backend Engineer
-            <br>
-            Building scalable systems
-            for real-world products.
-        </h1>
+      <p class="hero-description">
+        Computer Science Engineer specializing in backend engineering, database design, and API development. Worked with Node.js, PostgreSQL, Redis, Docker, and distributed system architectures through practical projects and industry simulations.
+      </p>
 
-        <p class="hero-description">
-            Computer Science Engineer specializing in Backend Development,
-            distributed systems and database-driven applications.
-            Experienced with Node.js, PostgreSQL, Redis, Docker and scalable API architecture,
-            with hands-on project and industry simulation experience.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects" class="btn-primary">
-                View Projects
-            </a>
-
-            <a href="#contact" class="btn-secondary">
-                Contact Me
-            </a>
-            <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
-
-        </div>
-
-        <div class="hero-stats">
-
-            <div>
-                <h3>2+</h3>
-                <span>Production Deployments</span>
-            </div>
-
-            <div>
-                <h3>6+</h3>
-                <span>Core Technologies</span>
-            </div>
-
-            <div>
-                <h3>4+</h3>
-                <span>Certifications & Simulations</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="section">
-
-    <div class="container">
-
-        <span class="section-label">
-            ABOUT
-        </span>
-
-        <h2>
-            Building software that scales.
-        </h2>
-
-        <div class="about-grid">
-
-           <div style="text-align: justify; line-height: 1.6;">
-  <p style="margin-bottom: 1rem;">
-    I'm Mohammad Anas, a Backend Engineer specializing in building scalable APIs, secure authentication systems, and production-grade web applications. My passion lies in solving real-world problems through clean architecture, efficient code, and reliable software engineering practices.
-  </p>
-
-  <p style="margin-bottom: 1rem;">
-    Over the past few years, I've worked on projects involving role-based access control (RBAC), JWT authentication, Redis caching, PostgreSQL database design, and Dockerized deployments. I enjoy building systems that not only work today but can scale effectively as products grow.
-  </p>
-
-  <p style="margin-bottom: 1rem;">
-    My technical foundation includes Data Structures & Algorithms, DBMS, Operating Systems, and Computer Networks, allowing me to approach software development with both practical and theoretical understanding. I believe great engineering comes from balancing performance, maintainability, and user needs.
-  </p>
-
-  <p>
-    When I'm not building projects, you'll find me exploring system design concepts, learning cloud technologies, improving my problem-solving skills, and staying up-to-date with modern backend development practices.
-  </p>
-</div>
-
-            <div class="about-card">
-
-                <h4>Currently Focused On</h4>
-                <p class="about-card-subtitle">Continuously learning and building production-ready backend systems.</p>
-
-                <div class="chips-container">
-                    <span class="chip">Node.js Architecture</span>
-                    <span class="chip">TypeScript</span>
-                    <span class="chip">PostgreSQL Optimization</span>
-                    <span class="chip">Redis</span>
-                    <span class="chip">Docker</span>
-                    <span class="chip">System Design</span>
-                    <span class="chip">CI/CD</span>
-                    <span class="chip">AWS</span>
-                    <span class="chip">Prisma ORM</span>
-                    <span class="chip">REST APIs</span>
-                    <span class="chip">Authentication & Security</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects" class="section">
-
-<div class="container">
-
-<span class="section-label">
-FEATURED WORK
-</span>
-
-<h2>
-Selected Projects
-</h2>
-
-<!-- Project 1 -->
-
-
-<article class="project">
-  <div class="project-content">
-    <h3>Task Flow</h3>
-    <p>
-      Full-stack collaboration platform
-      with project management,
-      role-based permissions,
-      analytics dashboard and production deployment.
-    </p>
-    <ul>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> React + Node.js</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> JWT Authentication</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Project Analytics</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Role Management</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> PostgreSQL Database</li>
-    </ul>
-    <div class="project-links">
-      <a href="https://task-flow-omega-cyan.vercel.app" class="btn-primary" target="_blank">Live Demo</a>
-      <a href="https://github.com/MohammadAnas-07/Task-Flow" class="btn-secondary" target="_blank">GitHub</a>
-    </div>
-  </div>
-  <div class="project-image-wrapper">
-    <img src="assets/team-task-manager.png" alt="Team Task Manager Preview" loading="lazy">
-  </div>
-</article>
-
-<article class="project">
-  <div class="project-content">
-    <h3>SQL-Editor</h3>
-    <p>
-      Modern web-based SQL Integrated Development Environment (IDE)
-      enabling real-time query execution, live schema exploration, 
-      and comprehensive query execution history.
-    </p>
-    <ul>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> React + TypeScript</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Monaco Editor Integration</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Fastify & Node.js Backend</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> SQLite + Prisma ORM</li>
-      <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time Query Execution</li>
-    </ul>
-    <div class="project-links">
-      <a href="https://github.com/MohammadAnas-07/SQL-editor" class="btn-secondary" target="_blank">GitHub</a>
-    </div>
-  </div>
-  <div class="project-image-wrapper">
-    <img src="assets/sql-editor.jpg" alt="SQL Editor Preview" loading="lazy">
-  </div>
-</article>
-
-
-</div>
-
-</section>
-
-<!-- Project 3 -->
-
-<!-- SKILLS -->
-
-<section id="skills" class="section">
-
-  <div class="container">
-
-    <span class="section-label">
-      TECH STACK
-    </span>
-
-    <h2>
-      Technologies I Use
-    </h2>
-
-    <div class="skills-wrapper">
-
-      <div class="skill-category">
-
-        <h3>Backend</h3>
-
-        <div class="skills-grid">
-          <span>
-            <img src="assets/nodedotjs.svg" alt="">
-            Node.js
-        </span>
-          <span>
-            <img src="assets/expressdotcom.svg" alt="">
-            Express.js
-        </span>
-          <span>
-            <img src="assets/fastapi.svg" alt="">
-            REST APIs
-        </span>
-          <span>
-            <img src="assets/jsonwebtokens.svg" alt="">
-            JWT
-          </span>
-        </div>
-
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">Resume</a>
       </div>
 
-      <div class="skill-category">
-
-        <h3>Database and Caching</h3>
-
-        <div class="skills-grid">
-          <span>
-            <img src="assets/postgresql.svg" alt="">
-            PostgreSQL
-        </span>
-          <span>
-            <img src="assets/prisma.svg" alt="">
-            Prisma ORM
-        </span>
-          <span>
-            <img src="assets/redis.svg" alt="">
-            Redis
-        </span>
-          <span>
-            <img src="assets/mongodb.svg" alt="">
-            MongoDB
-        </span>
-        </div>
-
-      </div>
-
-      <div class="skill-category">
-
-        <h3>Frontend</h3>
-
-        <div class="skills-grid">
-          <span>
-            <img src="assets/react.svg" alt="">
-            React
-        </span>
-          <span>
-            <img src="assets/javascript.svg" alt="">
-            JavaScript
-        </span>
-          <span>
-            <img src="assets/html5.svg" alt="">
-            HTML
-        </span>
-          <span>
-            <img src="assets/css.svg" alt="">
-            CSS
-        </span>
-          <span>
-            <img src="assets/tailwindcss.svg" alt="">
-            Tailwind CSS
-        </span>
-          <span>
-            <img src="assets/nextdotjs.svg" alt="">
-            Next.js
-        </span>
-        </div>
-
-      </div>
-
-      <div class="skill-category">
-
-        <h3>DevOps & Tools</h3>
-
-        <div class="skills-grid">
-          <span>
-            <img src="assets//docker.svg" alt="">
-            Docker
-        </span>
-          <span>
-            <img src="assets/git.svg" alt="">
-            Git
-        </span>
-          <span>
-            <img src="assets/github.svg" alt="">
-            GitHub
-        </span>
-          <span>
-            <img src="assets/postman.svg" alt="">
-            Postman
-        </span>
-        </div>
-
-      </div>
-      <div class="skill-category">
-
-        <h3>CS Fundamentals</h3>
-
-        <div class="skills-grid">
-          <span>
-            Data Structures & Algorithms
-        </span>
-          <span>
-            OOPS
-        </span>
-          <span>
-            DBMS
-        </span>
-          <span>
-            Operating Systems
-        </span>
-          <span>
-            Computer Networks
-        </span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education" class="section">
-
-  <div class="container">
-
-    <span class="section-label">
-      EDUCATION
-    </span>
-
-    <h2>
-      Academic Background
-    </h2>
-
-    <div class="education-card">
-
-      <div class="education-top">
-
+      <div class="hero-stats">
         <div>
+          <h3>2+</h3>
+          <span>Production Deployments</span>
+        </div>
+        <div>
+          <h3>6+</h3>
+          <span>Core Technologies</span>
+        </div>
+        <div>
+          <h3>4+</h3>
+          <span>Certifications & Simulations</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <h3>
-            B.Tech in Computer Science Engineering
-          </h3>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <span class="section-label">ABOUT</span>
 
+      <h2>Building software designed to endure.</h2>
+
+      <div class="about-grid">
+        <div class="about-bio">
           <p>
-            Jamia Hamdard, New Delhi, India
+            I'm Mohammad Anas, a Backend Engineer focused on building fast APIs, secure authentication systems, and web applications. I focus on solving software engineering challenges with clear design, efficient database queries, and structured code.
           </p>
-
+          <p>
+            My hands-on experience spans role-based access control (RBAC), JWT authentication, Redis caching, PostgreSQL schema design, and containerized deployments using Docker. I aim to write clean backends that are simple to maintain and extend.
+          </p>
+          <p>
+            My foundation covers Data Structures & Algorithms, Database Systems, Operating Systems, and Computer Networks. This background allows me to connect computer science fundamentals with day-to-day software development.
+          </p>
+          <p>
+            Outside of building projects, I spend time exploring system design patterns, cloud services, and backend tooling.
+          </p>
         </div>
 
-        <span class="education-badge">
-          Completed
-        </span>
+        <div class="about-card">
+          <h3>Currently Focused On</h3>
+          <p class="about-card-subtitle">Continuously expanding skills and building production-ready backend systems.</p>
 
+          <div class="chips-container">
+            <span class="chip">Node.js Architecture</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">PostgreSQL Optimization</span>
+            <span class="chip">Redis</span>
+            <span class="chip">Docker</span>
+            <span class="chip">System Design</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Prisma ORM</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Authentication & Security</span>
+          </div>
+        </div>
       </div>
-
     </div>
+  </section>
 
-  </div>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <span class="section-label">FEATURED WORK</span>
 
-</section>
+      <h2>Selected Projects</h2>
 
-<!-- CERTIFICATIONS -->
+      <!-- Project 1 -->
+      <article class="project">
+        <div class="project-content">
+          <h3>Task Flow</h3>
+          <p>
+            Full-stack collaboration platform featuring project management tools, role-based permissions, real-time analytics, and automated deployment.
+          </p>
+          <ul>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              React + Node.js
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              JWT Authentication
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Project Analytics
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Role Management
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              PostgreSQL Database
+            </li>
+          </ul>
+          <div class="project-links">
+            <a href="https://task-flow-omega-cyan.vercel.app" class="btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/MohammadAnas-07/Task-Flow" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-image-wrapper">
+          <img src="assets/team-task-manager.png" alt="Task Flow project dashboard preview" loading="lazy">
+        </div>
+      </article>
 
-<section id="certifications" class="section">
-
-  <div class="container">
-
-    <span class="section-label">
-      CERTIFICATIONS
-    </span>
-
-    <h2>
-      Recognition & Credentials
-    </h2>
-
-    <div class="cert-grid">
-
-      <div class="cert-card">
-        <h3>Complete Web Development Bootcamp</h3>
-        <p>Udemy</p>
-      </div>
-
-      <div class="cert-card">
-        <h3>DSA, Aptitude & Reasoning</h3>
-        <p>takeUforward</p>
-      </div>
-
-      <div class="cert-card">
-        <h3>SQL Basics Certification</h3>
-        <p>HackerRank</p>
-      </div>
-
-     
-
-      <div class="cert-card">
-  <h3>Deloitte Australia Technology Job Simulation</h3>
-  <p>Forage</p>
-</div>
-
+      <!-- Project 2 -->
+      <article class="project">
+        <div class="project-content">
+          <h3>SQL-Editor</h3>
+          <p>
+            Web-based SQL environment providing query execution, interactive database schema exploration, and execution history tracking.
+          </p>
+          <ul>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              React + TypeScript
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Monaco Editor Integration
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Fastify & Node.js Backend
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              SQLite + Prisma ORM
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Real-time Query Execution
+            </li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/MohammadAnas-07/SQL-editor" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-image-wrapper">
+          <img src="assets/sql-editor.jpg" alt="SQL Editor application preview" loading="lazy">
+        </div>
+      </article>
     </div>
+  </section>
 
-  </div>
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <span class="section-label">TECH STACK</span>
 
-</section>
+      <h2>Technologies I Use</h2>
 
+      <div class="skills-wrapper">
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skills-grid">
+            <span>
+              <img src="assets/nodedotjs.svg" alt="" aria-hidden="true">
+              Node.js
+            </span>
+            <span>
+              <img src="assets/expressdotcom.svg" alt="" aria-hidden="true">
+              Express.js
+            </span>
+            <span>
+              <img src="assets/fastapi.svg" alt="" aria-hidden="true">
+              REST APIs
+            </span>
+            <span>
+              <img src="assets/jsonwebtokens.svg" alt="" aria-hidden="true">
+              JWT
+            </span>
+          </div>
+        </div>
 
-</div>
+        <div class="skill-category">
+          <h3>Database and Caching</h3>
+          <div class="skills-grid">
+            <span>
+              <img src="assets/postgresql.svg" alt="" aria-hidden="true">
+              PostgreSQL
+            </span>
+            <span>
+              <img src="assets/prisma.svg" alt="" aria-hidden="true">
+              Prisma ORM
+            </span>
+            <span>
+              <img src="assets/redis.svg" alt="" aria-hidden="true">
+              Redis
+            </span>
+            <span>
+              <img src="assets/mongodb.svg" alt="" aria-hidden="true">
+              MongoDB
+            </span>
+          </div>
+        </div>
 
-</section>
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skills-grid">
+            <span>
+              <img src="assets/react.svg" alt="" aria-hidden="true">
+              React
+            </span>
+            <span>
+              <img src="assets/javascript.svg" alt="" aria-hidden="true">
+              JavaScript
+            </span>
+            <span>
+              <img src="assets/html5.svg" alt="" aria-hidden="true">
+              HTML
+            </span>
+            <span>
+              <img src="assets/css.svg" alt="" aria-hidden="true">
+              CSS
+            </span>
+            <span>
+              <img src="assets/tailwindcss.svg" alt="" aria-hidden="true">
+              Tailwind CSS
+            </span>
+            <span>
+              <img src="assets/nextdotjs.svg" alt="" aria-hidden="true">
+              Next.js
+            </span>
+          </div>
+        </div>
 
-<section id="experience" class="section">
+        <div class="skill-category">
+          <h3>DevOps & Tools</h3>
+          <div class="skills-grid">
+            <span>
+              <img src="assets/docker.svg" alt="" aria-hidden="true">
+              Docker
+            </span>
+            <span>
+              <img src="assets/git.svg" alt="" aria-hidden="true">
+              Git
+            </span>
+            <span>
+              <img src="assets/github.svg" alt="" aria-hidden="true">
+              GitHub
+            </span>
+            <span>
+              <img src="assets/postman.svg" alt="" aria-hidden="true">
+              Postman
+            </span>
+          </div>
+        </div>
 
-  <div class="container">
-
-    <span class="section-label">
-      VIRTUAL EXPERIENCE
-    </span>
-
-    <h2>
-      Industry Simulations
-    </h2>
-
-    <div class="cert-grid">
-
-      <div class="cert-card">
-        <h3>Deloitte Australia Technology Job Simulation</h3>
-        <p>Forage • June 2026</p>
-
-        <ul style="margin-top:1rem; color:#a1a1aa; line-height:1.8;">
-          <li>Developed Python-based telemetry data transformation solutions.</li>
-          <li>Normalized multiple JSON formats into a unified schema.</li>
-          <li>Implemented timestamp conversion and data validation logic.</li>
-          <li>Prepared a software development proposal for a factory monitoring dashboard.</li>
-        
-</ul>
-
-
+        <div class="skill-category">
+          <h3>CS Fundamentals</h3>
+          <div class="skills-grid">
+            <span>Data Structures & Algorithms</span>
+            <span>OOPS</span>
+            <span>DBMS</span>
+            <span>Operating Systems</span>
+            <span>Computer Networks</span>
+          </div>
+        </div>
       </div>
-
     </div>
+  </section>
 
-  </div>
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container">
+      <span class="section-label">EDUCATION</span>
 
-</section>
+      <h2>Academic Background</h2>
 
-<!-- CONTACT -->
+      <div class="education-card">
+        <div class="education-top">
+          <div>
+            <h3>B.Tech in Computer Science Engineering</h3>
+            <p>Jamia Hamdard, New Delhi, India</p>
+          </div>
+          <span class="education-badge">Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="section contact">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <span class="section-label">CERTIFICATIONS</span>
 
-<div class="container">
+      <h2>Recognition & Credentials</h2>
 
-<h2>
-Let's build something together.
-</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>Complete Web Development Bootcamp</h3>
+          <p>Udemy</p>
+        </div>
 
-<p>
-Currently open to Software Engineer,
-Backend Developer and Full Stack Developer opportunities.
-</p>
+        <div class="cert-card">
+          <h3>DSA, Aptitude & Reasoning</h3>
+          <p>takeUforward</p>
+        </div>
 
-<div class="contact-links">
+        <div class="cert-card">
+          <h3>SQL Basics Certification</h3>
+          <p>HackerRank</p>
+        </div>
 
-<a href="mailto:ansarianas53665@gmail.com">
-Email
-</a>
+        <div class="cert-card">
+          <h3>Deloitte Australia Technology Job Simulation</h3>
+          <p>Forage</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a href="https://github.com/MohammadAnas-07">
-GitHub
-</a>
+  <!-- VIRTUAL EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <span class="section-label">VIRTUAL EXPERIENCE</span>
 
-<a href="https://linkedin.com/in/mohammad-anas-790556236">
-LinkedIn
-</a>
+      <h2>Industry Simulations</h2>
 
-</div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>Deloitte Australia Technology Job Simulation</h3>
+          <p>Forage • June 2026</p>
 
-</div>
+          <ul class="experience-details">
+            <li>Developed Python-based telemetry data transformation solutions.</li>
+            <li>Normalized multiple JSON formats into a unified schema.</li>
+            <li>Implemented timestamp conversion and data validation logic.</li>
+            <li>Prepared a software development proposal for a factory monitoring dashboard.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Let's build something together.</h2>
 
-<footer>
+      <p>
+        Currently open to Software Engineer, Backend Developer, and Full Stack Developer opportunities.
+      </p>
 
-<div class="container">
+      <div class="contact-links">
+        <a href="mailto:ansarianas53665@gmail.com">Email</a>
+        <a href="https://github.com/MohammadAnas-07" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/mohammad-anas-790556236" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-<p>
-© 2026 Mohammad Anas
-</p>
+  <footer>
+    <div class="container">
+      <p>© 2026 Mohammad Anas</p>
+    </div>
+  </footer>
 
-</div>
-
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
