@@ -1,4 +1,32 @@
 // =========================
+// INTRO SPLASH
+// =========================
+
+(function () {
+  var splash = document.getElementById("intro-splash");
+  if (!splash) return;
+
+  var root = document.documentElement;
+  root.classList.add("intro-splash-active");
+
+  function lockBody() {
+    if (document.body) document.body.classList.add("intro-splash-active");
+  }
+  lockBody();
+  document.addEventListener("DOMContentLoaded", lockBody);
+
+  window.setTimeout(function () {
+    splash.classList.add("is-hidden");
+    root.classList.remove("intro-splash-active");
+    if (document.body) document.body.classList.remove("intro-splash-active");
+
+    window.setTimeout(function () {
+      if (splash.parentNode) splash.parentNode.removeChild(splash);
+    }, 400);
+  }, 1000);
+})();
+
+// =========================
 // MOBILE MENU & ACCESSIBILITY
 // =========================
 
