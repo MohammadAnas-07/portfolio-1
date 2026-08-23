@@ -28,110 +28,12 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <script>
-    (function() {
-      const storedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
+  <script src="theme-init.js"></script>
 </head>
 
 <body>
 
-  <!-- INTRO SPLASH -----------------------------------------------------------
-       Self-contained: every colour here is hardcoded on purpose so the splash
-       stays white/black regardless of the data-theme dark/light toggle.
-       Do not swap these for var(--bg) / var(--text).
-  -------------------------------------------------------------------------- -->
-  <style>
-    #intro-splash {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      opacity: 1;
-      transition: opacity 0.4s ease;
-    }
-
-    #intro-splash .intro-splash-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.15rem;
-      padding: 0 1.25rem;
-    }
-
-    #intro-splash .intro-splash-name {
-      margin: 0;
-      font-family: "Montserrat", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 2rem;
-      font-weight: 300;
-      letter-spacing: 0.06em;
-      color: #000000;
-    }
-
-    #intro-splash .intro-splash-tagline {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      font-family: "Montserrat", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 0.7rem;
-      font-weight: 300;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: #555555;
-      white-space: nowrap;
-    }
-
-    #intro-splash .intro-splash-tagline::before,
-    #intro-splash .intro-splash-tagline::after {
-      content: "";
-      width: 44px;
-      height: 1px;
-      background-color: #d4d4d4;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 380px) {
-      #intro-splash .intro-splash-name {
-        font-size: 1.65rem;
-      }
-
-      #intro-splash .intro-splash-tagline {
-        gap: 0.6rem;
-        font-size: 0.62rem;
-        letter-spacing: 0.2em;
-      }
-
-      #intro-splash .intro-splash-tagline::before,
-      #intro-splash .intro-splash-tagline::after {
-        width: 26px;
-      }
-    }
-
-    #intro-splash.is-hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    html.intro-splash-active,
-    body.intro-splash-active {
-      overflow: hidden;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #intro-splash {
-        transition: none;
-      }
-    }
-  </style>
-
+  <!-- INTRO SPLASH - styles in style.css, timing in script.js -->
   <div id="intro-splash" role="presentation" aria-hidden="true">
     <div class="intro-splash-inner">
       <p class="intro-splash-name">Mohammad Anas</p>
@@ -139,36 +41,8 @@
     </div>
   </div>
 
-  <script>
-    (function () {
-      var splash = document.getElementById("intro-splash");
-      if (!splash) return;
-
-      var root = document.documentElement;
-      root.classList.add("intro-splash-active");
-
-      function lockBody() {
-        if (document.body) document.body.classList.add("intro-splash-active");
-      }
-      lockBody();
-      document.addEventListener("DOMContentLoaded", lockBody);
-
-      window.setTimeout(function () {
-        splash.classList.add("is-hidden");
-        root.classList.remove("intro-splash-active");
-        if (document.body) document.body.classList.remove("intro-splash-active");
-
-        window.setTimeout(function () {
-          if (splash.parentNode) splash.parentNode.removeChild(splash);
-        }, 400);
-      }, 1000);
-    })();
-  </script>
-  <!-- END INTRO SPLASH -->
-
-
   <!-- SVG Sprite Definition for Reusable Icons -->
-  <svg style="display: none;">
+  <svg class="svg-sprite">
     <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="20 6 9 17 4 12"></polyline>
     </symbol>

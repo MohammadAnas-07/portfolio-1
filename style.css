@@ -871,3 +871,100 @@ footer {
     border-top: 1px solid var(--border);
   }
 }
+
+/* Inline SVG sprite holder - defines symbols only, never rendered */
+.svg-sprite {
+  display: none;
+}
+
+/* =========================
+   INTRO SPLASH
+   Every colour here is hardcoded on purpose so the splash stays white/black
+   regardless of the data-theme dark/light toggle. Do not swap these for
+   var(--bg) / var(--text).
+========================= */
+
+#intro-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+#intro-splash .intro-splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 0 1.25rem;
+}
+
+#intro-splash .intro-splash-name {
+  margin: 0;
+  font-family: "Montserrat", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+#intro-splash .intro-splash-tagline {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: "Montserrat", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #555555;
+  white-space: nowrap;
+}
+
+#intro-splash .intro-splash-tagline::before,
+#intro-splash .intro-splash-tagline::after {
+  content: "";
+  width: 44px;
+  height: 1px;
+  background-color: #d4d4d4;
+  flex-shrink: 0;
+}
+
+@media (max-width: 380px) {
+  #intro-splash .intro-splash-name {
+    font-size: 1.65rem;
+  }
+
+  #intro-splash .intro-splash-tagline {
+    gap: 0.6rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+  }
+
+  #intro-splash .intro-splash-tagline::before,
+  #intro-splash .intro-splash-tagline::after {
+    width: 26px;
+  }
+}
+
+#intro-splash.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+html.intro-splash-active,
+body.intro-splash-active {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #intro-splash {
+    transition: none;
+  }
+}
