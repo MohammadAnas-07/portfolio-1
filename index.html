@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mohammad Anas | Backend Engineer</title>
-  <meta name="description" content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker, and API architecture.">
+  <title>Mohammad Anas | Java Backend Developer</title>
+  <meta name="description" content="Java Backend Developer specializing in Spring Boot, Apache Kafka, Hibernate, Docker, and microservices architecture.">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mohammad Anas | Backend Engineer">
-  <meta property="og:description" content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker, and API architecture.">
-  <meta property="og:image" content="assets/team-task-manager.png">
+  <meta property="og:title" content="Mohammad Anas | Java Backend Developer">
+  <meta property="og:description" content="Java Backend Developer specializing in Spring Boot, Apache Kafka, Hibernate, Docker, and microservices architecture.">
+  <meta property="og:image" content="assets/saga-fulfillment-engine.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mohammad Anas | Backend Engineer">
-  <meta name="twitter:description" content="Backend Engineer specializing in Node.js, PostgreSQL, Redis, Docker, and API architecture.">
-  <meta name="twitter:image" content="assets/team-task-manager.png">
+  <meta name="twitter:title" content="Mohammad Anas | Java Backend Developer">
+  <meta name="twitter:description" content="Java Backend Developer specializing in Spring Boot, Apache Kafka, Hibernate, Docker, and microservices architecture.">
+  <meta name="twitter:image" content="assets/saga-fulfillment-engine.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -39,6 +39,82 @@
 </head>
 
 <body>
+
+  <!-- INTRO SPLASH -----------------------------------------------------------
+       Self-contained: colors are hardcoded (#ffffff / #000000) on purpose so the
+       splash stays white/black regardless of the data-theme dark/light toggle.
+       Do not swap these for var(--bg) / var(--text).
+  -------------------------------------------------------------------------- -->
+  <style>
+    #intro-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    #intro-splash .intro-splash-name {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #000000;
+    }
+
+    #intro-splash.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    html.intro-splash-active,
+    body.intro-splash-active {
+      overflow: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #intro-splash {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div id="intro-splash" role="presentation" aria-hidden="true">
+    <p class="intro-splash-name">Mohammad Anas</p>
+  </div>
+
+  <script>
+    (function () {
+      var splash = document.getElementById("intro-splash");
+      if (!splash) return;
+
+      var root = document.documentElement;
+      root.classList.add("intro-splash-active");
+
+      function lockBody() {
+        if (document.body) document.body.classList.add("intro-splash-active");
+      }
+      lockBody();
+      document.addEventListener("DOMContentLoaded", lockBody);
+
+      window.setTimeout(function () {
+        splash.classList.add("is-hidden");
+        root.classList.remove("intro-splash-active");
+        if (document.body) document.body.classList.remove("intro-splash-active");
+
+        window.setTimeout(function () {
+          if (splash.parentNode) splash.parentNode.removeChild(splash);
+        }, 400);
+      }, 1000);
+    })();
+  </script>
+  <!-- END INTRO SPLASH -->
+
 
   <!-- SVG Sprite Definition for Reusable Icons -->
   <svg style="display: none;">
@@ -87,13 +163,13 @@
       <span class="eyebrow">Available For Opportunities</span>
 
       <h1>
-        Backend Engineer
+        Java Backend Developer
         <br>
         Building reliable systems for real-world applications.
       </h1>
 
       <p class="hero-description">
-        Computer Science Engineer specializing in backend engineering, database design, and API development. Worked with Node.js, PostgreSQL, Redis, Docker, and distributed system architectures through practical projects and industry simulations.
+        Computer Science Engineer specializing in backend engineering, database design, and API development. Worked with Java, Spring Boot, Apache Kafka, Hibernate, Docker, and microservices architectures through practical projects and industry simulations.
       </p>
 
       <div class="hero-buttons">
@@ -129,10 +205,10 @@
       <div class="about-grid">
         <div class="about-bio">
           <p>
-            I'm Mohammad Anas, a Backend Engineer focused on building fast APIs, secure authentication systems, and web applications. I focus on solving software engineering challenges with clear design, efficient database queries, and structured code.
+            I'm Mohammad Anas, a Java Backend Developer focused on building fast APIs, secure authentication systems, and distributed services. I focus on solving software engineering challenges with clear design, efficient database queries, and structured code.
           </p>
           <p>
-            My hands-on experience spans role-based access control (RBAC), JWT authentication, Redis caching, PostgreSQL schema design, and containerized deployments using Docker. I aim to write clean backends that are simple to maintain and extend.
+            My hands-on experience spans Spring Boot services, role-based access control (RBAC), JWT authentication, Hibernate data modelling, event-driven messaging with Apache Kafka, and containerized deployments using Docker. I aim to write clean backends that are simple to maintain and extend.
           </p>
           <p>
             My foundation covers Data Structures & Algorithms, Database Systems, Operating Systems, and Computer Networks. This background allows me to connect computer science fundamentals with day-to-day software development.
@@ -147,15 +223,17 @@
           <p class="about-card-subtitle">Continuously expanding skills and building production-ready backend systems.</p>
 
           <div class="chips-container">
-            <span class="chip">Node.js Architecture</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">PostgreSQL Optimization</span>
+            <span class="chip">Java</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Microservices</span>
+            <span class="chip">Hibernate</span>
+            <span class="chip">Apache Kafka</span>
+            <span class="chip">MVC</span>
             <span class="chip">Redis</span>
             <span class="chip">Docker</span>
             <span class="chip">System Design</span>
             <span class="chip">CI/CD</span>
             <span class="chip">AWS</span>
-            <span class="chip">Prisma ORM</span>
             <span class="chip">REST APIs</span>
             <span class="chip">Authentication & Security</span>
           </div>
@@ -172,6 +250,44 @@
       <h2>Selected Projects</h2>
 
       <!-- Project 1 -->
+      <article class="project">
+        <div class="project-content">
+          <h3>Saga Fulfillment Engine</h3>
+          <p>
+            Distributed order-fulfillment system built across 6 microservices, using the Saga pattern to coordinate multi-step transactions and roll back automatically on failure. Apache Kafka drives asynchronous, event-driven communication between services; Resilience4j handles fault tolerance.
+          </p>
+          <ul>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Java + Spring Boot
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Apache Kafka (event-driven architecture)
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Saga Pattern &mdash; Distributed Transactions
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Docker &amp; Docker Compose
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Resilience4j &mdash; Fault Tolerance
+            </li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/MohammadAnas-07/saga-fulfillment-engine" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-image-wrapper">
+          <img src="assets/saga-fulfillment-engine.png" alt="Saga Fulfillment Engine architecture preview" loading="lazy">
+        </div>
+      </article>
+
+      <!-- Project 2 -->
       <article class="project">
         <div class="project-content">
           <h3>Task Flow</h3>
@@ -210,7 +326,7 @@
         </div>
       </article>
 
-      <!-- Project 2 -->
+      <!-- Project 3 -->
       <article class="project">
         <div class="project-content">
           <h3>SQL-Editor</h3>
@@ -262,12 +378,12 @@
           <h3>Backend</h3>
           <div class="skills-grid">
             <span>
-              <img src="assets/nodedotjs.svg" alt="" aria-hidden="true">
-              Node.js
+              <img src="assets/java.svg" alt="" aria-hidden="true">
+              Java
             </span>
             <span>
-              <img src="assets/expressdotcom.svg" alt="" aria-hidden="true">
-              Express.js
+              <img src="assets/springboot.svg" alt="" aria-hidden="true">
+              Spring Boot
             </span>
             <span>
               <img src="assets/fastapi.svg" alt="" aria-hidden="true">
@@ -288,8 +404,8 @@
               PostgreSQL
             </span>
             <span>
-              <img src="assets/prisma.svg" alt="" aria-hidden="true">
-              Prisma ORM
+              <img src="assets/hibernate.svg" alt="" aria-hidden="true">
+              Hibernate
             </span>
             <span>
               <img src="assets/redis.svg" alt="" aria-hidden="true">
