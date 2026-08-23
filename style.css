@@ -401,6 +401,7 @@ button:focus-visible {
   max-width: 50%;
   border-radius: 20px;
   overflow: hidden;
+  background: var(--surface-2);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -422,7 +423,8 @@ button:focus-visible {
 .project-image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   display: block;
 }
 

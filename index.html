@@ -40,6 +40,82 @@
 
 <body>
 
+  <!-- INTRO SPLASH -----------------------------------------------------------
+       Self-contained: colors are hardcoded (#ffffff / #000000) on purpose so the
+       splash stays white/black regardless of the data-theme dark/light toggle.
+       Do not swap these for var(--bg) / var(--text).
+  -------------------------------------------------------------------------- -->
+  <style>
+    #intro-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    #intro-splash .intro-splash-name {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #000000;
+    }
+
+    #intro-splash.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    html.intro-splash-active,
+    body.intro-splash-active {
+      overflow: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #intro-splash {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div id="intro-splash" role="presentation" aria-hidden="true">
+    <p class="intro-splash-name">Mohammad Anas</p>
+  </div>
+
+  <script>
+    (function () {
+      var splash = document.getElementById("intro-splash");
+      if (!splash) return;
+
+      var root = document.documentElement;
+      root.classList.add("intro-splash-active");
+
+      function lockBody() {
+        if (document.body) document.body.classList.add("intro-splash-active");
+      }
+      lockBody();
+      document.addEventListener("DOMContentLoaded", lockBody);
+
+      window.setTimeout(function () {
+        splash.classList.add("is-hidden");
+        root.classList.remove("intro-splash-active");
+        if (document.body) document.body.classList.remove("intro-splash-active");
+
+        window.setTimeout(function () {
+          if (splash.parentNode) splash.parentNode.removeChild(splash);
+        }, 400);
+      }, 1000);
+    })();
+  </script>
+  <!-- END INTRO SPLASH -->
+
+
   <!-- SVG Sprite Definition for Reusable Icons -->
   <svg style="display: none;">
     <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -174,6 +250,44 @@
       <!-- Project 1 -->
       <article class="project">
         <div class="project-content">
+          <h3>Saga Fulfillment Engine</h3>
+          <p>
+            Distributed order-fulfillment system built across 6 microservices, using the Saga pattern to coordinate multi-step transactions and roll back automatically on failure. Apache Kafka drives asynchronous, event-driven communication between services; Resilience4j handles fault tolerance.
+          </p>
+          <ul>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Java + Spring Boot
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Apache Kafka (event-driven architecture)
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Saga Pattern &mdash; Distributed Transactions
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Docker &amp; Docker Compose
+            </li>
+            <li>
+              <svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg>
+              Resilience4j &mdash; Fault Tolerance
+            </li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/MohammadAnas-07/saga-fulfillment-engine" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-image-wrapper">
+          <img src="assets/saga-fulfillment-engine.png" alt="Saga Fulfillment Engine architecture preview" loading="lazy">
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project">
+        <div class="project-content">
           <h3>Task Flow</h3>
           <p>
             Full-stack collaboration platform featuring project management tools, role-based permissions, real-time analytics, and automated deployment.
@@ -210,7 +324,7 @@
         </div>
       </article>
 
-      <!-- Project 2 -->
+      <!-- Project 3 -->
       <article class="project">
         <div class="project-content">
           <h3>SQL-Editor</h3>
