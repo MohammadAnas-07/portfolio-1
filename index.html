@@ -24,7 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
@@ -41,8 +41,8 @@
 <body>
 
   <!-- INTRO SPLASH -----------------------------------------------------------
-       Self-contained: colors are hardcoded (#ffffff / #000000) on purpose so the
-       splash stays white/black regardless of the data-theme dark/light toggle.
+       Self-contained: every colour here is hardcoded on purpose so the splash
+       stays white/black regardless of the data-theme dark/light toggle.
        Do not swap these for var(--bg) / var(--text).
   -------------------------------------------------------------------------- -->
   <style>
@@ -58,13 +58,61 @@
       transition: opacity 0.4s ease;
     }
 
+    #intro-splash .intro-splash-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.15rem;
+      padding: 0 1.25rem;
+    }
+
     #intro-splash .intro-splash-name {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Montserrat", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 2rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
+      font-weight: 300;
+      letter-spacing: 0.06em;
       color: #000000;
+    }
+
+    #intro-splash .intro-splash-tagline {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-family: "Montserrat", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #555555;
+      white-space: nowrap;
+    }
+
+    #intro-splash .intro-splash-tagline::before,
+    #intro-splash .intro-splash-tagline::after {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background-color: #d4d4d4;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 380px) {
+      #intro-splash .intro-splash-name {
+        font-size: 1.65rem;
+      }
+
+      #intro-splash .intro-splash-tagline {
+        gap: 0.6rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+      }
+
+      #intro-splash .intro-splash-tagline::before,
+      #intro-splash .intro-splash-tagline::after {
+        width: 26px;
+      }
     }
 
     #intro-splash.is-hidden {
@@ -85,7 +133,10 @@
   </style>
 
   <div id="intro-splash" role="presentation" aria-hidden="true">
-    <p class="intro-splash-name">Mohammad Anas</p>
+    <div class="intro-splash-inner">
+      <p class="intro-splash-name">Mohammad Anas</p>
+      <p class="intro-splash-tagline">Build &bull; Learn &bull; Create</p>
+    </div>
   </div>
 
   <script>
